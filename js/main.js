@@ -68,7 +68,6 @@ function playPattern(pattern) {
     }, index * 700);
   });
 }
-
 function activateTile(color) {
   const tile = document.querySelector(`[data-tile='${color}']`);
   const sound = audios[color];
@@ -80,7 +79,6 @@ function activateTile(color) {
     tile.classList.add('inactive');
   }, 300);
 }
-
 function userTurn() {
   board.classList.remove('unclickable');
   info.innerText = 'Your turn!';
