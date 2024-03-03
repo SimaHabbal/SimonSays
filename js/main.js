@@ -129,11 +129,9 @@ function resetGame() {
 function winGame() {
   const sound = audios['gameWin'];
   sound.play();
-
   if (highScore < level) {
     highScore = level;
   }
-
   pattern = [];
   userPattern = [];
   level = 0;
