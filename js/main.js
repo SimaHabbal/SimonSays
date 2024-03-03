@@ -47,10 +47,8 @@ function nextLevel() {
     highScore = level;
     high.innerText = highScore;
   }
-  
   pattern.push(getRandomColor());
   playPattern(pattern);
-
   setTimeout(() => {
     userTurn();
   }, (pattern.length * 700) + 200);
@@ -68,13 +66,12 @@ function playPattern(pattern) {
     }, index * 700);
   });
 }
+
 function activateTile(color) {
   const tile = document.querySelector(`[data-tile='${color}']`);
   const sound = audios[color];
-
   tile.classList.remove('inactive');
   sound.play();
-
   setTimeout(() => {
     tile.classList.add('inactive');
   }, 300);
