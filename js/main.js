@@ -88,14 +88,12 @@ function handleClick(tile) {
   userPattern.push(tile);
   const sound = audios[tile];
   sound.play();
-
   for (let i = 0; i < userPattern.length; i++) {
     if (userPattern[i] !== pattern[i]) {
       resetGame();
       return;
     }
   }
-
   if (userPattern.length === pattern.length) {
     if (level === 12) {
       winGame();
@@ -110,11 +108,9 @@ function handleClick(tile) {
 function resetGame() {
   const sound = audios['gameOver'];
   sound.play();
-
   if (highScore < level) {
     highScore = level;
   }
-
   pattern = [];
   userPattern = [];
   level = 0;
