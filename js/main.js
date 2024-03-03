@@ -118,10 +118,8 @@ function resetGame() {
   pattern = [];
   userPattern = [];
   level = 0;
-
   play.classList.remove('hidden');
   board.classList.add('unclickable');
-
   info.innerText = "Game over!";
   high.innerText = highScore;
 }
@@ -135,10 +133,8 @@ function winGame() {
   pattern = [];
   userPattern = [];
   level = 0;
-
   play.classList.remove('hidden');
   board.classList.add('unclickable');
-
   info.innerText = "Congrats.You won!";
   high.innerText = highScore;
 }
